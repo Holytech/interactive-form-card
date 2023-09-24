@@ -121,9 +121,9 @@ const App = () => {
           />
         </div>
       </div>
-      <div className="w-full lg:w-2/3 md:2/3 h-screen flex justify-center items-center lg:absolute md:absolute static lg:right-0 md:right-0">
+      <div className="w-full lg:w-2/3 md:2/3 h-screen flex justify-center items-center absolute lg:right-0 md:right-0 sm:top-0">
         {isSubmitted ? (
-          <div className="flex justify-center items-center flex-col w-[400px]">
+          <div className="flex justify-center items-center flex-col w-[400px] sm:w-full">
             <img src="check.png" alt="check" className="mb-10" />
             <h1 className="mb-10 text-3xl">THANK YOU</h1>
             <p className="mb-6 text-[#8F8694]">We&apos;ve added your card details</p>
@@ -132,7 +132,7 @@ const App = () => {
             </button>
           </div>
         ) : (
-          <form className="w-[400px]" onSubmit={cardDetails}>
+          <form className="w-[400px] sm:w-full" onSubmit={cardDetails}>
             <div className="w-full mb-4">
               <p className="">CARDHOLDER NAME</p>
               <input
